@@ -1,0 +1,26 @@
+{
+  "name": "adasadventure-webapp",
+  "version": "1.0.0",
+  "description": "proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a01750264/AdasAdventure-WebApp.git"
+  },
+  "author": "br, ea, jh, ac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a01750264/AdasAdventure-WebApp/issues"
+  },
+  "homepage": "https://github.com/a01750264/AdasAdventure-WebApp#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "tedious": "^11.0.7"
+  }
+}
