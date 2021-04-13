@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('poyectoWeb','sa','Password1234$',{
+const sequelize = new Sequelize('proyectoWeb','sa','Password1234$',{
     dialect: 'mssql',
     dialectOptions:{
         options:{
