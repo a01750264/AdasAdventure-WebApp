@@ -11,7 +11,7 @@ exports.getAgregarJugador = (request, response)=>{
 
 exports.getConfirmacion = (request, response)=>{
     response.send("Datos guardados correctamente");
-}
+};
 
 exports.getJugadores = (request, response)=>{
     Jugador.findAll()
@@ -22,7 +22,23 @@ exports.getJugadores = (request, response)=>{
         });
         console.log(data);
     })
-}
+};
+
+exports.getJugadores = (request,response)=>{
+    Jugador.findAll()
+        .then(registros=>{
+            var data=[];
+            registros.forEach(registro=>{
+                data.push(registro.dataValues);
+            });
+            console.log(data);
+            response.render('../views/tableroEJS.html',{
+                personas:data,
+                sesion:"Autorizado",
+                hora:"14:00"
+            });
+        })   
+};
 
 exports.postAgregarJugador = (request, response)=>{
     console.log(request.body);
