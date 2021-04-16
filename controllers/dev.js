@@ -1,16 +1,26 @@
 const Competencia = require('../models/Competencia');
 const Carrera = require('../models/Carrera');
+const path = require('path')
+const { request } = require('express');
 
 exports.getDev = (request, response)=>{
     response.sendFile(path.join(__dirname, 'views', 'dev.html'))
 };
 
-exports.getAgregarCompetencia = (request, respoonse)=>{
-    response.sendFile(path.join(__dirname, 'views', 'competencia.html'));
+exports.getAgregarCompetencia = (request, response)=>{
+    response.sendFile(path.join(__dirname, '..', 'views', 'agregarCompetencia.html'));
 };
 
-exports.getAgregarCarrera = (request, respoonse)=>{
-    response.sendFile(path.join(__dirname, 'views', 'carrera.html'));
+exports.getAgregarCarrera = (request, response)=>{
+    response.sendFile(path.join(__dirname, '..', 'views', 'agregarCarrera.html'));
+};
+
+exports.getConfirmarCompetencia = (request, response)=>{
+    response.send("Competencia agregada")
+};
+
+exports.getConfirmarCarrera = (request, response)=>{
+    response.send("Carrera agregada")
 };
 
 exports.postAgregarCarrera = (request, response)=>{
@@ -32,5 +42,5 @@ exports.postAgregarCompetencia = (request, response)=>{
     }).then(resultado=>console.log("Competencia creada"))
       .catch(err=>console.log(err));
     
-    response.redirect("/dev/confirmacionCarrera");
+    response.redirect("/dev/confirmacionCompetencia");
 }

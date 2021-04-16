@@ -29,7 +29,7 @@ const Jugador = sequelize.define('jugador', {
         allowNull: false
     },
     'fecha_nacimiento':{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false
     },
     'email':{

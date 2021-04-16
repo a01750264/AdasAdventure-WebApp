@@ -6,8 +6,12 @@ exports.getHome = (request, response)=>{
 };
 
 exports.getAgregarJugador = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', "formulario.html"));
+    response.sendFile(path.join(__dirname, '..', 'views', "agregarJugador.html"));
 };
+
+exports.getConfirmacion = (request, response)=>{
+    response.send("Datos guardados correctamente");
+}
 
 exports.getJugadores = (request, response)=>{
     Jugador.findAll()
