@@ -22,6 +22,6 @@ sequelize.sync()
     .then(resultado=>{
         console.log("Conexión exitosa");
         //Lanza el servidor para escuchar peticiones
-        app.listen(puerto, ()=>console.log("Servidor en línea en el puerto 8080"));
+        app.listen(puerto, ()=>console.log("Servidor en línea en el puerto", puerto));
     })
     .catch(err=>console.log(err));
