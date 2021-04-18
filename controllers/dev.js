@@ -1,5 +1,5 @@
-const Competencia = require('../models/Competencia');
-const Carrera = require('../models/Carrera');
+const Competencia = require('../utils/db').models.competencia;
+const Carrera = require('../utils/db').models.carrera;
 const path = require('path')
 const { request } = require('express');
 

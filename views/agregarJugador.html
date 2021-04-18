@@ -96,27 +96,13 @@
                     <div>
                         <div class="col-md-6">
                             <label for="carrera" class="clase2">Selecciona una carrera que te llame la atención:</label>
-                                <select name="jugadorCarrera" id="escolaridad">
+                                <select name="jugadorCarrera" id="carrera">
                                     <option></option>
-                                    <option value="1">Arquitectura</option>
-                                    <option value="2">Ingeniería en tecnologías computacionales</option>
-                                    <option value="3">Ingeniería en robótica y sistemas digitales</option>
-                                    <option value="4">Ingeniería en alimentos</option>
-                                    <option value="5">Ingeniería biomédica</option>
-                                    <option value="6">Ingeniería en biotecnología</option>
-                                    <option value="7">Ingeniería civil</option>
-                                    <option value="8">Ingeniería en ciencia de datos y matemáticas</option>
-                                    <option value="9">Ingeniería en desarrollo sustentable</option>
-                                    <option value="10">Ingeniería en electrónica</option>
-                                    <option value="11">Ingeniería en innovación y desarrollo</option>
-                                    <option value="12">Ingeniería en mecatrónica</option>
-                                    <option value="13">Ingeniería en nanotecnología</option>
-                                    <option value="14">Ingeniería en transformación digital de negocios</option>
-                                    <option value="15">Ingeniería en física industrial</option>
-                                    <option value="16">Ingeniería industrial y de sistemas</option>
-                                    <option value="17">Ingeniería mecánica</option>
-                                    <option value="18">Ingeniería química</option>
-                                    <option value="19">Otra</option>
+                                    <ol>
+                                        <%carreras.forEach((carrera)=>{%>
+                                            <option value=<%=carrera.id%>><%=carrera.carrera%></option>                                     
+                                        <%});%>
+                                    </ol>
                                 </select>
                             </div>
                         </div>

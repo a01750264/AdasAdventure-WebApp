@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 const puerto = 8080;
 
-sequelize.sync()
+sequelize.sync({force:false})
     .then(resultado=>{
         console.log("Conexión exitosa");
         //Lanza el servidor para escuchar peticiones
