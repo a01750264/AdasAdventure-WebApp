@@ -23,6 +23,10 @@ exports.getConfirmarCarrera = (request, response)=>{
     response.send("Carrera agregada")
 };
 
+exports.getUsuarioSteam = (request, response)=>{
+    response.send("Usuario Steam Agregado")
+};
+
 exports.postAgregarCarrera = (request, response)=>{
     console.log(request.body);
 
@@ -32,7 +36,7 @@ exports.postAgregarCarrera = (request, response)=>{
       .catch(err=>console.log(err));
 
     response.redirect("/dev/confirmacionCarrera");
-}
+};
 
 exports.postAgregarCompetencia = (request, response)=>{
     console.log(request.body);
@@ -43,4 +47,15 @@ exports.postAgregarCompetencia = (request, response)=>{
       .catch(err=>console.log(err));
     
     response.redirect("/dev/confirmacionCompetencia");
-}
+};
+
+exports.postUsuarioSteam = (request, response)=>{
+    console.log(request.body);
+
+    UsuarioSteam.create({
+        usuariosteam: request.body.usuariosteamUsuarioSteam
+    }).then(resultado=>console.log("Usuario Steam creado"))
+      .catch(err=>console.log(err));
+
+    response.redirect("/dev/UsuarioSteam");
+};
