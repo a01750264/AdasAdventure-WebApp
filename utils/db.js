@@ -19,6 +19,7 @@ const modelDefiners = [
     require('../models/Carrera'),
     require('../models/Competencia'),
     require('../models/Partida'),
+    require('../models/UsuarioSteam'),
 ];
 
 for(const modelDefiner of modelDefiners){
