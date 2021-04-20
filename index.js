@@ -3,6 +3,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const jugadorRoutes = require('./routes/Jugador');
 const devRoutes = require('./routes/dev');
+const steamRoutes = require('./routes/usuarioSteam');
 const app = express();
 const sequelize = require('./utils/db');
 
@@ -11,6 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/jugador', jugadorRoutes);
 app.use('/dev', devRoutes);
+app.use('/steam', steamRoutes);
 
 app.engine('html',require('ejs').renderFile);
 

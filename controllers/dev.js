@@ -32,7 +32,7 @@ exports.postAgregarCarrera = (request, response)=>{
       .catch(err=>console.log(err));
 
     response.redirect("/dev/confirmacionCarrera");
-}
+};
 
 exports.postAgregarCompetencia = (request, response)=>{
     console.log(request.body);
@@ -43,4 +43,4 @@ exports.postAgregarCompetencia = (request, response)=>{
       .catch(err=>console.log(err));
     
     response.redirect("/dev/confirmacionCompetencia");
-}
+};
