@@ -18,6 +18,10 @@ app.engine('html',require('ejs').renderFile);
 
 app.set('view engine', 'ejs');
 
+app.get('/', (request, response)=>{
+    response.sendFile(path.join(__dirname, '.', 'views', 'home.html'));
+});
+
 const puerto = 8080;
 
 sequelize.sync({force:false})

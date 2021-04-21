@@ -2,14 +2,6 @@ const Jugador = require('../utils/db').models.jugador;
 const Carrera = require('../utils/db').models.carrera;
 const path = require('path');
 
-exports.getHome = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'home.html'));
-};
-
-// exports.getAgregarJugador = (request, response)=>{
-//     response.sendFile(path.join(__dirname, '..', 'views', "agregarJugador.html"));
-// };
-
 exports.getAgregarJugador = (request, response)=>{
     Carrera.findAll()
         .then(carreras=>{
