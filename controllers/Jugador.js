@@ -49,6 +49,11 @@ exports.getJugadores = (request,response)=>{
         })   
 };
 
+exports.getError = (request, response)=>{
+    response.sendFile(path.join(__dirname, '..', 'views', 'jugadorError.html'))
+}
+
+
 exports.postAgregarJugador = (request, response)=>{
     console.log(request.body);
 
@@ -63,8 +68,11 @@ exports.postAgregarJugador = (request, response)=>{
         password: request.body.jugadorPassword,
         escolaridad: request.body.jugadorEscolaridad,
         carreraId: request.body.jugadorCarrera
-    }).then(resultado=>console.log("Jugador registrado"))
-      .catch(err=>console.log(err));
-
-    response.redirect('/jugador/confirmacion/');
+    }).then(resultado=>{
+        console.log("Jugador registrado")
+        response.redirect('/jugador/confirmacion/')
+    }).catch(err=>{
+        console.log(err)
+        response.redirect('/jugador/error')
+    });
 };

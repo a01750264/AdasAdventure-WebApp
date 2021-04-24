@@ -4,7 +4,7 @@ const path = require('path')
 const { request } = require('express');
 
 exports.getDev = (request, response)=>{
-    response.sendFile(path.join(__dirname, 'views', 'dev.html'))
+    response.sendFile(path.join(__dirname, '..', 'views', 'dev.html'))
 };
 
 exports.getAgregarCompetencia = (request, response)=>{

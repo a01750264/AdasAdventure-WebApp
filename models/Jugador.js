@@ -10,11 +10,12 @@ const Jugador = (sequelize)=>{
         },
         'genero':{
             type: Sequelize.CHAR,
-            allowNull: true,
+            allowNull: true
         },
         'user_name':{
             type: Sequelize.STRING(30),
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         'nombre':{
             type: Sequelize.STRING(40),

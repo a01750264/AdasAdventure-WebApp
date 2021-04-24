@@ -24,7 +24,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="clase2" for="FechaNaUsuario"> Fecha de nacimiento:</label>
-                                <input type="date" class="form-control" placeholder="dd/mm/aaaa" id="FechaNaUsuario" name="jugadorFecha" required="true"/>
+                                <input type="date" class="form-control" placeholder="dd/mm/aaaa" id="FechaNaUsuario" name="jugadorFecha" required="true" max="2012-12-31" min="1950-01-01" />
                             </div>
                         </div>    
                     </div>
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="genero" class="clase2">Género:</label>
-                                <select name="jugadorGenero" id="genero">
+                                <select name="jugadorGenero" id="genero" required>
                                     <option></option>
                                     <option value="F">Femenino</option>
                                     <option value="M">Masculino</option>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="escolaridad" class="clase2">Selecciona tu nivel de escolaridad terminada:</label>
-                                <select name="jugadorEscolaridad" id="escolaridad">
+                                <select name="jugadorEscolaridad" id="escolaridad" required>
                                     <option></option>
                                     <option value="Primaria">Primaria</option>
                                     <option value="Secundaria">Secundaria</option>
@@ -96,7 +96,7 @@
                     <div>
                         <div class="col-md-6">
                             <label for="carrera" class="clase2">Selecciona una carrera que te llame la atención:</label>
-                                <select name="jugadorCarrera" id="carrera">
+                                <select name="jugadorCarrera" id="carrera" required>
                                     <option></option>
                                     <ol>
                                         <%carreras.forEach((carrera)=>{%>
