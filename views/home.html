@@ -13,16 +13,30 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>Ada's Adventure</title>
   </head>
+
+  <!-- Barra de navegacion -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="/home">
-          <img src="../images/ada.png" alt="" width="75" height="30"
-            class="d-inline-block align-text-top">
+          <img
+            src="../images/ada.png"
+            alt=""
+            width="75"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
           Ada's Adventure
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
@@ -42,10 +56,11 @@
   <body class="clase1">
     <br />
     <br />
+
+    <!-- Carrusel -->
     <div
-      class="container"
-      style="background-color: black; opacity: 0.6; border-radius: 15px"
-      hover="opacity: 1"
+      class="container bg-dark"
+      style="border-radius: 15px"
     >
       <center>
         <div
@@ -64,41 +79,43 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <video class="d-block w-25" controls height="300" width="300">
+              <video class="d-block w-40" controls height="312" width="312">
                 <source src="/images/video.mp4" type="video/mp4" />
               </video>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Intoducción al proyecto</h5>
               </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="/images/thumbnail_001.jpg"
-                class="d-block w-25"
-                alt="..."
-              />
+              <img src="/images/Ada Idle.png" class="d-block w-40" alt="..." />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h5>Ada Lovelace</h5>
                 <p>
-                  Some representative placeholder content for the second slide.
+                  Ada es una estudiante de ingeniería en biotecnología que
+                  quiere salvar al mundo.
                 </p>
               </div>
             </div>
             <div class="carousel-item">
               <img
-                src="/images/thumbnail_007.jpg"
-                class="d-block w-25"
+                src="/images/juego.JPG"
+                class="d-block d-md-block w-40"
                 alt="..."
               />
               <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>Niveles</h5>
                 <p>
-                  Some representative placeholder content for the third slide.
+                  Hay 4 niveles, cada uno con un acertijo al final.
                 </p>
               </div>
             </div>
@@ -124,44 +141,67 @@
         </div>
       </center>
     </div>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
 
-    <div class="container" style="background-color: azure; padding-top: 60px; padding-bottom: 40px; border-radius: 15px;">
+    <!-- Tarjetas -->
+    <div
+      class="container bg-light border-dark"
+      style="
+        padding-top: 60px;
+        padding-bottom: 40px;
+        border-radius: 15px;
+      "
+    >
       <center>
         <div class="container">
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
-              <div class="card border-dark   text-dark bg-light mb-3" style="max-width: 18rem;">
+              <div
+                class="card border-dark text-dark bg-light mb-3"
+                style="max-width: 18rem"
+              >
                 <div class="card-header">Competencias</div>
-                <img src="/images/home.png" class="card-img-top" alt="...">
+                <img src="/images/competencias.JPG" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <p class="card-text">Para evaluar el desempeño del jugador utilizamos competencias que se evalúan en cada nivel del juego.
+                  <p class="card-text">
+                    Para evaluar el desempeño del jugador utilizamos
+                    competencias que se evalúan en cada nivel del juego.
                   </p>
                   <a href="#" class="btn btn-success">Lista de competencias</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card border-dark   text-dark bg-light mb-3" style="max-width: 18rem;">
+              <div
+                class="card border-dark text-dark bg-light mb-3"
+                style="max-width: 18rem"
+              >
                 <div class="card-header">Niveles</div>
-                <img src="/images/home.png" class="card-img-top" alt="...">
+                <img src="/images/niveles.JPG" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <p class="card-text">Con cada nivel el jugador irá desbloqueando piezas para una armadura e irá desarrollando una vacuna
-                    para derrotar al jefe final.
+                  <p class="card-text">
+                    Con cada nivel el jugador irá desbloqueando piezas para una
+                    armadura e irá desarrollando una vacuna para derrotar al
+                    jefe final.
                   </p>
                   <a href="#" class="btn btn-success">Niveles</a>
                 </div>
               </div>
             </div>
             <div class="col">
-              <div class="card border-dark   text-dark bg-light mb-3" style="max-width: 18rem;">
+              <div
+                class="card border-dark text-dark bg-light mb-3"
+                style="max-width: 18rem"
+              >
                 <div class="card-header">Desafíos</div>
-                <img src="/images/home.png" class="card-img-top" alt="...">
+                <img src="/images/laberinto.JPG" class="card-img-top" alt="..." />
                 <div class="card-body">
-                  <p class="card-text">Al final de cada nivel el jugador deberá superar un desafío para poder avanzar al próximo nivel,
-                    estos desafíos serán los indicadores para evaluar las competencias.
+                  <p class="card-text">
+                    Al final de cada nivel el jugador deberá superar un desafío
+                    para poder avanzar al próximo nivel, estos desafíos serán
+                    los indicadores para evaluar las competencias.
                   </p>
                 </div>
               </div>
@@ -170,11 +210,12 @@
         </div>
       </center>
     </div>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
 
 
+    <!-- Scripts requeridos -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
