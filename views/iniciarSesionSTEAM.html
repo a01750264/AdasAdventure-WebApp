@@ -75,7 +75,9 @@
     <div class="container">
       <p>¿No tienes cuenta? <a href="/steam/agregarUsuario">Crea una aquí.</a> </p>
     </div>
-
+    <%if (error == 1){%>
+      <script>alert("Los datos introducidos son incorrectos")</script>
+    <%}%>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

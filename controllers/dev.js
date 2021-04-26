@@ -23,6 +23,20 @@ exports.getConfirmarCarrera = (request, response)=>{
     response.send("Carrera agregada")
 };
 
+exports.getVerCompetencias = (request, response)=>{
+    Competencia.findAll()
+    .then(competencias=>{
+        var data = [];
+        competencias.forEach(competencia=>{
+            data.push(competencia.dataValues);
+        });
+        console.log(data)
+        response.render('../views/verCompetencias.html',{
+            competencias:data,
+        });
+    });
+};
+
 exports.postAgregarCarrera = (request, response)=>{
     console.log(request.body);
 

@@ -6,7 +6,8 @@ exports.getAgregarUsuarioSteam = (request, response)=>{
 };
 
 exports.getIniciarSesion = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'iniciarSesionSTEAM.html'));
+    response.render('../views/iniciarSesionSTEAM.html',{
+            error:request.query.error});
 };
 
 exports.postAgregarUsuarioSteam = (request, response)=>{
@@ -39,7 +40,7 @@ exports.postIniciarSesion = (request, response)=>{
         });
         console.log(data);
         if (registros.length == 0){
-            response.send("Revisa que tus datos sean correctos")
+            response.redirect("/steam/iniciarSesion?error=1");
         } else {
             response.redirect('/home')
         }
