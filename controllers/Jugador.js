@@ -76,3 +76,25 @@ exports.postAgregarJugador = (request, response)=>{
         response.redirect('/jugador/error')
     });
 };
+
+exports.postIniciarSesion = (request, response)=>{
+    console.log(request.body);
+
+    Jugador.findAll({
+        where: {
+            user_name: request.body.usuarioUsuario,
+            password: request.body.passwordUsuario
+        }
+    }).then(registros=>{
+        var data = [];
+        registros.forEach(registro=>{
+            data.push(registro.dataValues);
+        });
+        console.log(data);
+        if (registros.length == 0){
+            response.send("Revisa que tus datos sean correctos")
+        } else {
+            response.send("Bienvenid@")
+        }
+    })
+};
