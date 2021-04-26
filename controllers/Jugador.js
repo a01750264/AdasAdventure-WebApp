@@ -12,14 +12,11 @@ exports.getAgregarJugador = (request, response)=>{
             console.log(data);
             response.render('../views/agregarJugador.html',{
                 carreras:data,
+                error:request.query.error,
                 sesion:"Autorizado",
                 hora:"14:00"
             });
         })
-};
-
-exports.getConfirmacion = (request, response)=>{
-    response.redirect('/jugador/tablero')
 };
 
 exports.getJugadores = (request, response)=>{
@@ -49,10 +46,6 @@ exports.getJugadores = (request,response)=>{
         })   
 };
 
-exports.getError = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'jugadorError.html'));
-};
-
 exports.getIniciarSesion = (request, response)=>{
     response.render('../views/iniciarSesionJugador.html',{
             error:request.query.error});
@@ -74,10 +67,10 @@ exports.postAgregarJugador = (request, response)=>{
         carreraId: request.body.jugadorCarrera
     }).then(resultado=>{
         console.log("Jugador registrado")
-        response.redirect('/jugador/confirmacion/')
+        response.redirect('/home')
     }).catch(err=>{
         console.log(err)
-        response.redirect('/jugador/error')
+        response.redirect('/jugador/agregarJugador?error=1')
     });
 };
 
