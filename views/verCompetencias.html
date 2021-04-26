@@ -48,11 +48,17 @@
             <br>
             Para el juego estamos evaluando las siguientes competencias:
             <ul>
+                <%competencias.forEach((competencia)=>{%>
+                    <li>
+                        <i><u><%=competencia.competencia%></u></i>
+                        <br>
+                        <%=competencia.description%>
+                    </li>
+                <%});%>
                 <li>
                     <i><u>Pensamiento lógico matemático:</u></i>
                     <br>
-                    Esta competencia evalúa la habilidad que tiene el jugador de resolver problemas utilizando números y operaciones
-                    matemáticas.
+                    Esta competencia evalúa la habilidad que tiene el jugador de resolver problemas utilizando números y operaciones matemáticas.
                 </li>
                 <li>
                     <i><u>Pensamiento deductivo:</u></i>

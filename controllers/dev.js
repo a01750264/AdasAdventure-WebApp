@@ -41,7 +41,7 @@ exports.postAgregarCarrera = (request, response)=>{
     console.log(request.body);
 
     Carrera.create({
-        carrera: request.body.carreraCarrera
+        carrera: request.body.carreraCarrera,
     }).then(resultado=>console.log("Carrera creada"))
       .catch(err=>console.log(err));
 
@@ -52,7 +52,8 @@ exports.postAgregarCompetencia = (request, response)=>{
     console.log(request.body);
 
     Competencia.create({
-        competencia: request.body.competenciaCompetencia
+        competencia: request.body.competenciaCompetencia,
+        description: request.body.descriptionCompetencia
     }).then(resultado=>console.log("Competencia creada"))
       .catch(err=>console.log(err));
     

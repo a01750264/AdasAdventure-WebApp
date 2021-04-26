@@ -11,6 +11,10 @@ const Competencia = (sequelize)=>{
         'competencia':{
             type: Sequelize.STRING(50),
             allowNull: false
+        },
+        'description':{
+            type: Sequelize.STRING(500),
+            allowNull: false
         }
     })
 }
