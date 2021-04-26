@@ -24,7 +24,7 @@ app.get('/home', (request, response)=>{
 
 app.get('/', (request, response)=>{
     response.sendFile(path.join(__dirname, '.', 'views', 'iniciarSesion.html'))
-})
+});
 
 const puerto = 8080;
 

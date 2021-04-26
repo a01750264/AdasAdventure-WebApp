@@ -7,7 +7,9 @@ router.get('/agregarJugador', jugadorController.getAgregarJugador);
 router.get('/confirmacion', jugadorController.getConfirmacion);
 router.get('/tablero', jugadorController.getJugadores);
 router.get('/error', jugadorController.getError);
+router.get('/iniciarSesion', jugadorController.getIniciarSesion);
 router.post('/iniciarSesion', jugadorController.postIniciarSesion);
+router.post('/iniciarSesionWeb', jugadorController.postIniciarSesionApp);
 router.post('/agregarJugador', jugadorController.postAgregarJugador);
 
 module.exports = router;

@@ -50,9 +50,12 @@ exports.getJugadores = (request,response)=>{
 };
 
 exports.getError = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'jugadorError.html'))
-}
+    response.sendFile(path.join(__dirname, '..', 'views', 'jugadorError.html'));
+};
 
+exports.getIniciarSesion = (request, response)=>{
+    response.sendFile(path.join(__dirname, '..', 'views', 'iniciarSesionJugador.html'));
+};
 
 exports.postAgregarJugador = (request, response)=>{
     console.log(request.body);
@@ -95,6 +98,28 @@ exports.postIniciarSesion = (request, response)=>{
             response.send("Revisa que tus datos sean correctos")
         } else {
             response.send("Bienvenid@")
+        }
+    })
+};
+
+exports.postIniciarSesionApp = (request, response)=>{
+    console.log(request.body);
+
+    Jugador.findAll({
+        where: {
+            user_name: request.body.usuarioUsuario,
+            password: request.body.passwordUsuario
+        }
+    }).then(registros=>{
+        var data = [];
+        registros.forEach(registro=>{
+            data.push(registro.dataValues);
+        });
+        console.log(data);
+        if (registros.length == 0){
+            response.send("Revisa que tus datos sean correctos")
+        } else {
+            response.redirect('/home')
         }
     })
 };
