@@ -12,36 +12,54 @@
     />
   </head>
   <title>Iniciar sesión</title>
-  <header class="bg-dark">
-      <h1>Inicia Sesión</h1>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="../images/ada.png" alt="" width="75" height="30" class="d-inline-block align-text-top" />
+          Ada's Adventure
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
   <body class="clase1">
     <div class="container">
-        <form action="/jugador/iniciarSesionWeb" method="post">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label class="clase2" for="NombreUsuario"> Nombre de usuario:</label>
-                        <input type="text" class="form-control" placeholder="Introduce tu nombre de usuario" id="NombreUsuario"
-                            name="usuarioUsuario" required="true" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label class="clase2" for="NombreUsuario"> Contraseña:</label>
-                        <input type="password" class="form-control" placeholder="Introduce tu contraseña" id="PswdUsuario" name="passwordUsuario"
-                            required="true" />
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-warning clase2" type="submit" id="btnEnviar">
-                Enviar
-            </button>
-            <button class="btn btn-danger clase2" type="reset">Deshacer</button>
-        </form>
+      <br>
+      <h1>Inicia sesión con tus datos</h1>
+      <br>
+      <form action="/jugador/iniciarSesionWeb" method="post">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label class="clase2" for="NombreUsuario"> Nombre de usuario:</label>
+                      <input type="text" class="form-control" placeholder="Introduce tu nombre de usuario" id="NombreUsuario"
+                          name="usuarioUsuario" required="true" />
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label class="clase2" for="NombreUsuario"> Contraseña:</label>
+                      <input type="password" class="form-control" placeholder="Introduce tu contraseña" id="PswdUsuario" name="passwordUsuario"
+                          required="true" />
+                  </div>
+              </div>
+          </div>
+          <button class="btn btn-warning clase2" type="submit" id="btnEnviar">
+              Enviar
+          </button>
+          <button class="btn btn-danger clase2" type="reset">Deshacer</button>
+      </form>
+    </div>
+    <br>
+    <div class="container">
+      <p>¿No tienes cuenta? <a href="/jugador/agregarJugador">Crea una aquí.</a> </p>
     </div>
 
     <script

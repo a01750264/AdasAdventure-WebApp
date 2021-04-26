@@ -11,12 +11,26 @@
       crossorigin="anonymous"
     />
   </head>
-  <header class="container">
-    <h1>Registro STEAM</h1>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="../images/ada.png" alt="" width="75" height="30" class="d-inline-block align-text-top" />
+          Ada's Adventure
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
   </header>
 
   <body class="clase1">
     <div class="container">
+      <br>
+      <h1>Crea tu cuenta</h1>
+      <br>
       <form action="/steam/agregarUsuario" method="post">
         <div class="row">
           <div class="col-md-6">
@@ -40,7 +54,7 @@
               <input
                 type="email"
                 class="form-control"
-                placeholder="example@mail.com"
+                placeholder="Ingresa tu correo electrónico"
                 id="steamEmail"
                 name="steamEmail"
                 required="true"
@@ -70,7 +84,7 @@
               <input
                 type="password"
                 class="form-control"
-                placeholder="ej: d$F%vewO!"
+                placeholder="Introduce tu contraseña"
                 id="PswdUsuario"
                 name="steamPswd"
                 required="true"
