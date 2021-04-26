@@ -54,7 +54,8 @@ exports.getError = (request, response)=>{
 };
 
 exports.getIniciarSesion = (request, response)=>{
-    response.sendFile(path.join(__dirname, '..', 'views', 'iniciarSesionJugador.html'));
+    response.render('../views/iniciarSesionJugador.html',{
+            error:request.query.error});
 };
 
 exports.postAgregarJugador = (request, response)=>{
@@ -117,7 +118,7 @@ exports.postIniciarSesionApp = (request, response)=>{
         });
         console.log(data);
         if (registros.length == 0){
-            response.send("Revisa que tus datos sean correctos")
+            response.redirect("/jugador/iniciarSesion?error=1")
         } else {
             response.redirect('/home')
         }
