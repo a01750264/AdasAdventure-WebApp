@@ -4,6 +4,12 @@ h1 {
   font-family: "Times New Roman", Times, serif;
 }
 
+h2 {
+  text-align: center;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+
 .clase1 {
   background-image: url("/images/home.png");
   text-align: center;

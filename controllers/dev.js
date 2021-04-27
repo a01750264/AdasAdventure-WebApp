@@ -1,7 +1,7 @@
 const Competencia = require('../utils/db').models.competencia;
 const Carrera = require('../utils/db').models.carrera;
 const path = require('path')
-const { request } = require('express');
+const { request, response } = require('express');
 
 exports.getDev = (request, response)=>{
     response.sendFile(path.join(__dirname, '..', 'views', 'dev.html'))
@@ -36,6 +36,10 @@ exports.getVerCompetencias = (request, response)=>{
         });
     });
 };
+
+exports.getTableau = (request, response)=>{
+    response.sendFile(path.join(__dirname, '..', 'views', 'tableau.html'));
+}
 
 exports.postAgregarCarrera = (request, response)=>{
     console.log(request.body);
