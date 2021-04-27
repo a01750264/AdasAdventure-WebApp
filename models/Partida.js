@@ -17,7 +17,7 @@ const Partida = (sequelize)=>{
             allowNull: false
         },
         'tiempo_jugado':{
-            type: Sequelize.TIME
+            type: Sequelize.FLOAT
         }
     })
 }
