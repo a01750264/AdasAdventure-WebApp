@@ -10,14 +10,15 @@ const Partida = (sequelize)=>{
         },
         'puntuacion':{
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         'progreso':{
             type: Sequelize.INTEGER,
             allowNull: false
         },
         'tiempo_jugado':{
-            type: Sequelize.FLOAT
+            type: Sequelize.FLOAT,
+            allowNull: true
         }
     })
 }
