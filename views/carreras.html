@@ -38,30 +38,33 @@
 
 <body class="clase1">
     <br>
-    <div class="container">
-        <h1>Competencias en el juego</h1>
-    </div>
     <br>
-    <div class="container-fluid bg-white" style="padding: 40px; text-align: left; font-size: 25px;">
-        <p>
-            Durante el juego el desempeño del jugador lo estaremos evaluando con <b>indicadores</b> en los acertijos que nos dirán
-            las <b>competencias</b> que mejor han desarrollado a lo largo de éste. Con estas competencias seremos capaces de ver las
-            <b>áreas en donde más destaca cada jugador</b> lo que puede servir como guía hacia estudiar una carrera <u><a href="https://movimientosteam.org/" target="_blank">STEAM</a></u>.
-            <br>
-            <br>
-            Para el juego estamos evaluando las siguientes competencias:
-            <ul>
-                <%competencias.forEach((competencia)=>{%>
-                    <li>
-                        <i><u><%=competencia.competencia%></u></i>
-                        <br>
-                        <%=competencia.description%>
-                    </li>
-                <%});%>
-            </ul>
-        </p>
+    <h1>Carreras</h1>
+    <br>
+    <div class="container bg-dark" style="padding:15px; border-radius:15px">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="table-warning">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Carrera</th>
+                </tr>
+            </thead>
+            <ol>
+                <%carreras.forEach((carrera)=>{%>
+                    <tbody id="b1" class="table-info">
+                        <tr>
+                            <td scope="row">
+                                <%=carrera.id%>
+                            </td>
+                            <td scope="row">
+                                <%=carrera.carrera%>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <%});%>
+            </ol>
+        </table>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

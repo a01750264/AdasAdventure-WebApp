@@ -9,6 +9,7 @@ router.get('/confirmacionCompetencia', devController.getConfirmarCompetencia);
 router.get('/confirmacionCarrera', devController.getConfirmarCarrera);
 router.get('/verCompetencias', devController.getVerCompetencias);
 router.get('/tableau', devController.getTableau);
+router.get('/verCarreras', devController.getVerCarreras);
 router.post('/agregarCarrera', devController.postAgregarCarrera);
 router.post('/agregarCompetencia', devController.postAgregarCompetencia);
 

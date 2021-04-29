@@ -37,6 +37,20 @@ exports.getVerCompetencias = (request, response)=>{
     });
 };
 
+exports.getVerCarreras = (request, response)=>{
+    Carrera.findAll()
+    .then(carreras=>{
+        var data = [];
+        carreras.forEach(carrera=>{
+            data.push(carrera.dataValues);
+        });
+        console.log(data)
+        response.render('../views/carreras.html',{
+            carreras:data,
+        });
+    });
+};
+
 exports.getTableau = (request, response)=>{
     response.sendFile(path.join(__dirname, '..', 'views', 'tableau.html'));
 }

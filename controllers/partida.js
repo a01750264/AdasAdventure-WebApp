@@ -43,7 +43,7 @@ exports.postAgregarPartida = (request, response)=>{
                 progreso: request.body.progreso,
                 tiempo_jugado: request.body.tiempo,
                 jugadorId: jugador.id,
-                comptenciumId: request.body.competencia
+                competenciumId: request.body.competencia
             })
         })
         response.send("Partida creada correctamente");
