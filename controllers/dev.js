@@ -53,7 +53,11 @@ exports.getVerCarreras = (request, response)=>{
 
 exports.getTableau = (request, response)=>{
     response.sendFile(path.join(__dirname, '..', 'views', 'tableau.html'));
-}
+};
+
+exports.getGame = (request, response)=>{
+    response.download(path.join(__dirname, '..', 'public', 'resources', 'AdasAdventure.zip'))
+};
 
 exports.postAgregarCarrera = (request, response)=>{
     console.log(request.body);
